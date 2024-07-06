@@ -5,92 +5,12 @@ const BeachRight = (props) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={1080}
     height={1080}
-    viewBox="-209 -378 1080 1080"
+    viewBox="36.15 -290 830 950"
     xmlSpace="preserve"
     {...props}
   >
     <desc>{"Created with Fabric.js 5.2.4"}</desc>
-    <defs />
-    <g
-      transform="matrix(1 0 0 1 540 540)"
-      id="0b554ed5-c0d4-44fd-8536-885092f7d2e5"
-    >
-      <rect
-        style={{
-          stroke: "none",
-          strokeWidth: 1,
-          strokeDasharray: "none",
-          strokeLinecap: "butt",
-          strokeDashoffset: 0,
-          strokeLinejoin: "miter",
-          strokeMiterlimit: 4,
-          fill: "rgb(255,255,255)",
-          fillRule: "nonzero",
-          opacity: 1,
-          visibility: "hidden",
-        }}
-        vectorEffect="non-scaling-stroke"
-        x={-540}
-        y={-540}
-        rx={0}
-        ry={0}
-        width={1080}
-        height={1080}
-      />
-    </g>
-    <g
-      transform="matrix(1 0 0 1 540 540)"
-      id="e408ab41-1256-4048-8496-787f0b2df4af"
-    />
-    <g transform="matrix(1 0 0 1 -746.62 40.99)">
-      <rect
-        style={{
-          stroke: "none",
-          strokeWidth: 1,
-          strokeDasharray: "none",
-          strokeLinecap: "butt",
-          strokeDashoffset: 0,
-          strokeLinejoin: "miter",
-          strokeMiterlimit: 4,
-          fill: "rgb(255,255,255)",
-          fillOpacity: 0,
-          fillRule: "nonzero",
-          opacity: 1,
-        }}
-        vectorEffect="non-scaling-stroke"
-        x={-50}
-        y={-50}
-        rx={0}
-        ry={0}
-        width={100}
-        height={100}
-      />
-    </g>
-    <g transform="matrix(1 0 0 1 -256.62 530.99)">
-      <rect
-        style={{
-          stroke: "none",
-          strokeWidth: 1,
-          strokeDasharray: "none",
-          strokeLinecap: "butt",
-          strokeDashoffset: 0,
-          strokeLinejoin: "miter",
-          strokeMiterlimit: 4,
-          fill: "rgb(255,255,255)",
-          fillRule: "nonzero",
-          opacity: 1,
-          visibility: "hidden",
-        }}
-        vectorEffect="non-scaling-stroke"
-        x={-540}
-        y={-540}
-        rx={0}
-        ry={0}
-        width={1080}
-        height={1080}
-      />
-    </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 614.4 -264.12)">
+    <g transform="matrix(0.13 0 0 -0.13 516.61 378.75)">
       <path
         style={{
           stroke: "none",
@@ -110,7 +30,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 793.78 -262.75)">
+    <g transform="matrix(0.13 0 0 -0.13 830.56 416.75)">
       <path
         style={{
           stroke: "none",
@@ -130,7 +50,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 804.6 -240.95)">
+    <g transform="matrix(0.13 0 0 -0.13 847.24 457.35)">
       <path
         style={{
           stroke: "none",
@@ -150,7 +70,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 784.32 -176.79)">
+    <g transform="matrix(0.13 0 0 -0.13 802.64 570.84)">
       <path
         style={{
           stroke: "none",
@@ -170,7 +90,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 785.03 -167.05)">
+    <g transform="matrix(0.13 0 0 -0.13 802.65 588.43)">
       <path
         style={{
           stroke: "none",
@@ -190,7 +110,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 791.56 -151.23)">
+    <g transform="matrix(0.13 0 0 -0.13 811.99 617.51)">
       <path
         style={{
           stroke: "none",
@@ -210,47 +130,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 694.35 -144.67)">
-      <path
-        style={{
-          stroke: "none",
-          strokeWidth: 1,
-          strokeDasharray: "none",
-          strokeLinecap: "butt",
-          strokeDashoffset: 0,
-          strokeLinejoin: "miter",
-          strokeMiterlimit: 4,
-          fill: "rgb(242,188,49)",
-          fillRule: "evenodd",
-          opacity: 1,
-        }}
-        vectorEffect="non-scaling-stroke"
-        transform=" translate(-3840.36, -2566.36)"
-        d="M 1083.77 2172.66 L 6596.959999999999 2960.0699999999997 L 6596.959999999999 2172.66 z"
-        strokeLinecap="round"
-      />
-    </g>
-    <g transform="matrix(-3.88 0.22 0.19 3.39 570.7 564.8)">
-      <path
-        style={{
-          stroke: "none",
-          strokeWidth: 1,
-          strokeDasharray: "none",
-          strokeLinecap: "butt",
-          strokeDashoffset: 0,
-          strokeLinejoin: "miter",
-          strokeMiterlimit: 4,
-          fill: "rgb(242,188,49)",
-          fillRule: "nonzero",
-          opacity: 1,
-        }}
-        vectorEffect="non-scaling-stroke"
-        transform=" translate(-450, -379)"
-        d="M 0 174 L 25 169.7 C 50 165.3 100 156.7 150 157 C 200 157.3 250 166.7 300 171.3 C 350 176 400 176 450 180.8 C 500 185.7 550 195.3 600 193.2 C 650 191 700 177 750 174.2 C 800 171.3 850 179.7 875 183.8 L 900 188 L 900 601 L 875 601 C 850 601 800 601 750 601 C 700 601 650 601 600 601 C 550 601 500 601 450 601 C 400 601 350 601 300 601 C 250 601 200 601 150 601 C 100 601 50 601 25 601 L 0 601 Z"
-        strokeLinecap="round"
-      />
-    </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 750.24 -160.48)">
+    <g transform="matrix(0.13 0 0 -0.13 636.77 616.79)">
       <path
         style={{
           stroke: "none",
@@ -265,12 +145,72 @@ const BeachRight = (props) => (
           opacity: 1,
         }}
         vectorEffect="non-scaling-stroke"
+        transform=" translate(-3840.36, -2566.36)"
+        d="M 1083.77 2172.66 L 6596.959999999999 2960.0699999999997 L 6596.959999999999 2172.66 z"
+        strokeLinecap="round"
+      />
+    </g>
+    <g transform="matrix(0.13 0 0 -0.13 637.76 658.38)">
+      <path
+        style={{
+          stroke: "none",
+          strokeWidth: 1,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeDashoffset: 0,
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 4,
+          fill: "rgb(255,255,255)",
+          fillRule: "evenodd",
+          opacity: 1,
+        }}
+        vectorEffect="non-scaling-stroke"
+        transform=" translate(-3840.37, -2254.73)"
+        d="M 1083.77 2172.66 L 6596.96 2336.8 L 6596.96 2172.66 Z"
+        strokeLinecap="round"
+      />
+    </g>
+    <g transform="matrix(0.13 0 0 -0.13 734.81 602.75)">
+      <path
+        style={{
+          stroke: "none",
+          strokeWidth: 1,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeDashoffset: 0,
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 4,
+          fill: "rgb(242,188,49)",
+          fillRule: "evenodd",
+          opacity: 1,
+        }}
+        vectorEffect="non-scaling-stroke"
         transform=" translate(-4596.76, -2674.39)"
         d="M 2596.56 2388.72 L 6596.96 2643.9199999999996 L 6596.96 2960.0699999999997 z"
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 571.76 -246.56)">
+    <g transform="matrix(0.13 0 0 -0.13 843.35 584.18)">
+      <path
+        style={{
+          stroke: "none",
+          strokeWidth: 1,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeDashoffset: 0,
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 4,
+          fill: "rgb(58,122,50)",
+          fillRule: "evenodd",
+          opacity: 1,
+        }}
+        vectorEffect="non-scaling-stroke"
+        transform=" translate(-5442.93, -2803.22)"
+        d="M 4288.89 2630.43 L 6596.960000000001 2856.58 L 6596.960000000001 2976 Z"
+        strokeLinecap="round"
+      />
+    </g>
+    <g transform="matrix(0.13 0 0 -0.13 441.35 393.76)">
       <path
         style={{
           stroke: "none",
@@ -290,7 +230,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 615.39 -197.84)">
+    <g transform="matrix(0.13 0 0 -0.13 494.11 497.37)">
       <path
         style={{
           stroke: "none",
@@ -310,7 +250,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 618.55 -197.91)">
+    <g transform="matrix(0.13 0 0 -0.13 501.58 497.61)">
       <path
         style={{
           stroke: "none",
@@ -330,7 +270,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 0.01 0.01 -0.07 555.48 -245.62)">
+    <g transform="matrix(0.13 0 0 -0.13 406.53 412.92)">
       <path
         style={{
           stroke: "none",
@@ -350,7 +290,7 @@ const BeachRight = (props) => (
         strokeLinecap="round"
       />
     </g>
-    <g transform="matrix(0.07 -0.01 -0.01 -0.07 615.38 -285.86)">
+    <g transform="matrix(0.13 0 0 -0.13 521.23 339.27)">
       <path
         style={{
           stroke: "none",

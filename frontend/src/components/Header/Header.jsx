@@ -4,7 +4,7 @@ import Navigator from './Navigator'
 export default function Header() {
     return (
         <>
-            <div className="px-10 flex justify-between w-full z-50 border-2">
+            <div className="px-16 flex justify-between w-full z-[100]">
                 <div>
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </div>
