@@ -11,8 +11,8 @@ export default function Waves() {
         <div className='w-full'>
             <div className='min-w-[1800px] absolute -top-64'>
                 <Waves3back className='z-10 absolute' style={{ top: -scrollVal * 0.2 }} />
-                <Waves2mid className='z-30 absolute' style={{ top: -scrollVal * 0.6 }} />
-                <Waves1front className='z-50 absolute' style={{ top: -scrollVal * 0.9 }} />
+                <Waves2mid className='z-30 absolute opacity-95' style={{ top: -scrollVal * 0.6 }} />
+                <Waves1front className='z-50 absolute opacity-95' style={{ top: -scrollVal * 0.9 }} />
             </div>
         </div>
     ); 1
