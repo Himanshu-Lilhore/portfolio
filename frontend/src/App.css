@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .logo {
-  height: 9em;
+  height: 8em;
   padding: 1.5em;
   position: relative;
   display: inline-block;
@@ -31,11 +31,12 @@
   filter: blur(5em);
   opacity:0;
   z-index: 100;
-  transition: opacity 0.8s ease-out, transform 0.4s ease-out;
+  transition: opacity 4s ease-out, transform 4s ease-out;
 }
 .logo-container:hover::before {
   transform: scale(2.2);
   opacity:100;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 @keyframes logo-spin {

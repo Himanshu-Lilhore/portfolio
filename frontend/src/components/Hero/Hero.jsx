@@ -16,7 +16,7 @@ export default function Hero() {
                         >
                             Hi there 👋
                         </div>
-                        <div className={`${hiClasses} absolute z-[21] scale-105 left-1 -inset-1 bg-yellow-700`}
+                        <div className={`${hiClasses} absolute z-[21] scale-105 left-1 -inset-1 bg-orange-400`}
                             style={{ clipPath: 'polygon(5% 15%, 90% 0%, 100% 100%, 0% 90%)' }}
                         >
                             Hi there 👋
@@ -24,7 +24,7 @@ export default function Hero() {
                     </div>
 
                     {/* Name */}
-                    <div className='px-3 py-1 flex text-8xl z-20 relative bg-black border-4 border-yellow-700 font-medium'
+                    <div className='px-3 py-1 flex text-8xl z-20 relative bg-black border-4 border-orange-400 font-medium'
                     >
                         <div className="block font-light">I'm&nbsp;</div>
                         <div>Himanshu Lilhore</div>
