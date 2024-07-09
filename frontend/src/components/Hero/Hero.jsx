@@ -6,7 +6,7 @@ export default function Hero() {
 
     return (
         <>
-            <div className="flex flex-wrap justify-center content-center h-screen overflow-x-hidden">
+            <div className="bg-cyan-400 flex flex-wrap justify-center content-center h-screen overflow-x-hidden">
                 <div className='absolute text-4xl text-white' style={{ top: '17rem' }}>
 
                     {/* Hi */}

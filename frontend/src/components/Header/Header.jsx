@@ -1,5 +1,6 @@
 import logo from '/logo.svg'
 import Navigator from './Navigator'
+import './Header.css'
 
 export default function Header() {
     return (
