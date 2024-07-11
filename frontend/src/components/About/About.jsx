@@ -25,7 +25,7 @@ export default function About() {
 
                         <DescLine>
                             At
-                            <Highlighter bgColor="bg-green-600/90">Deloitte</Highlighter>
+                            <Highlighter bgColor="bg-green-500/90">Deloitte</Highlighter>
                             , I have worked on web development stacks including
                             <Highlighter bgColor="bg-rose-400">MERN and Java</Highlighter>
                             in backend for health projects
