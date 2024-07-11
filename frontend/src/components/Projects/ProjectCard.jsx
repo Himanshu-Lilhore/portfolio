@@ -8,9 +8,9 @@ export default function ProjectCard({ details, props }) {
             <div className="imgDiv relative rounded-lg overflow-hidden border-0">
                 <img className='border-0' src={details.img} />
                 <div className="grad opacity-0 absolute -inset-0.5 bg-gradient-to-b from-transparent from-20% to-70% to-cyan-500"></div>
-                <div className='link text-white absolute z-[92] top-5 left-10 opacity-0'>
-                    <button className='rounded-sm flex bg-lime-600 py-1 px-20'>
-                        <div>Live Link</div>
+                <div className='link text-white absolute z-[92] left-1/2 transform -translate-x-1/2 top-14 opacity-0'>
+                    <button className='flex flex-row flex-nowrap rounded-sm bg-lime-600 py-1 px-9'>
+                        <div className='flex flex-nowrap'>Live Link</div>
                         <div className='ml-1 pt-1 h-5'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
