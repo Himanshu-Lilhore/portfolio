@@ -1,17 +1,17 @@
 export default function Skills() {
     const skills = {
-        'Languages': ['Javascript', 'Java', 'Python', 'Typescript', 'C/C++'],
-        'Technologies': ['Node.js', 'Express.js', 'React.js', 'SocketIO', 'Tailwind', 'Selenium', 'HTML5', 'CSS'],
-        'Databases': ['MongoDB', 'MySQL', 'OracleDB'],
+        Languages: ['Javascript', 'Java', 'Python', 'Typescript', 'C/C++'],
+        Technologies: ['Node.js', 'Express.js', 'React.js', 'SocketIO', 'Tailwind', 'Selenium', 'HTML5', 'CSS'],
+        Databases: ['MongoDB', 'MySQL', 'OracleDB'],
         'CI/CD': ['Github Pages', 'Vercel', 'Github Actions', 'Unit Testing'],
         'Developer Tools': ['Git/Github', 'VS Code', 'Eclipse', 'Jira', 'ChatGPT', 'Jama']
     }
 
     return (
-        <div className="py-20 relative bg-gradient-to-b from-transparent to-blue-500">
+        <div className="py-20 relative bg-gradient-to-b from-transparent to-purple-300">
             <div className="mx-44 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
 
-                <div className="border-4 rounded-lg border-slate-700 flex flex-col p-10 backdrop-blur-sm bg-gray-800/20 bg-clip-padding">
+                <div className="border-4 rounded-lg border-slate-700 flex flex-col p-10 backdrop-blur-sm bg-sky-500/20 bg-clip-padding">
 
                     <div className="absolute text-lg font-bold top-8 -right-16 bg-red-500 px-20 rotate-45">Skillset</div>
 

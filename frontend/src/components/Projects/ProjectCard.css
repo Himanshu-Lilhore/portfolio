@@ -1,0 +1,31 @@
+.card,.imgDiv,.grad,.title,.desc,.link{
+    transition: transform 200ms linear, opacity 200ms linear, visibility 0s;
+}
+
+.desc{
+    opacity: 0;
+}
+
+.card:hover {
+    transform: scale(1.10);
+    
+    .imgDiv{
+        transform: scale(1.25);
+        overflow: visible;
+        .grad{
+            opacity: 100;
+        }
+        .link{
+            opacity: 100;
+        }
+    }
+
+    .title{
+        transform: translateY(-70px);
+    }
+
+    .desc{
+        opacity:100;
+        transform: translateY(-35px);
+    }
+}

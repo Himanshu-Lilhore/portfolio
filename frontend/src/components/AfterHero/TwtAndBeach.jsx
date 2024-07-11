@@ -8,7 +8,7 @@ export default function TwtAndBeach() {
 
     return (
         <>
-            <div style={{ top: -105 - scrollVal * 1.7 }} className='z-[90] absolute opacity-5 right-28 transition-opacity duration-500 hover:opacity-100'>
+            <div style={{ top: -105 - scrollVal * 1.7 }} className='z-[91] absolute opacity-5 right-28 transition-opacity duration-500 hover:opacity-100'>
                 <TwitterEmbed></TwitterEmbed>
             </div>
 
