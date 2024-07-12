@@ -1,0 +1,17 @@
+.socail,.socialcard{
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.social{
+    .socialcard{
+        opacity:0;
+        transform: scaleX(0);
+    }
+}
+
+.social:hover {
+    .socialcard{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}

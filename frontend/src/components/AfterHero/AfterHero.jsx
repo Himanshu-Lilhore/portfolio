@@ -3,13 +3,14 @@ import Skills from "../Skills/Skills"
 import TwtAndBeach from "./TwtAndBeach"
 import About from "../About/About"
 import Projects from "../Projects/Projects"
+import Contact from "../Contact/Contact"
 
 export default function AfterHero() {
     const { scrollVal, setScrollVal } = useScroll()
 
     return (
         <>
-            <div className='relative min-h-[1400px]'>
+            <div className='relative min-h-[1500px]'>
 
                 <TwtAndBeach />
 
@@ -19,6 +20,7 @@ export default function AfterHero() {
                     <About />
                     <Skills />
                     <Projects />
+                    <Contact />
 
                 </div>
 
