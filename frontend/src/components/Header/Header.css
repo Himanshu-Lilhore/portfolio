@@ -1,5 +1,5 @@
 .logo {
-    height: 8em;
+    height: 7em;
     padding: 1.5em;
     position: relative;
     display: inline-block;
@@ -23,10 +23,10 @@
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background-color: #ff6f00a4;
-    filter: blur(5em);
+    background-color: #ff6600;
+    filter: blur(4.3em);
     z-index: 100;
-    transform: scale(2.2);
+    transform: scale(2.4);
     /* transition: opacity 4s ease-out, transform 4s ease-out; */
   }
 
