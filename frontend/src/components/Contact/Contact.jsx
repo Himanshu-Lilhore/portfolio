@@ -11,8 +11,8 @@ export default function Contact() {
                     <SocialPalette />
                 </div>
 
-                <div className="">
-                    <ContactCard />
+                <div>
+                    <ContactCard  className="h-full"/>
                 </div>
 
             </div>

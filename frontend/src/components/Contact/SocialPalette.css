@@ -1,17 +1,32 @@
-.social,.socialcard{
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+.social,.detailscard,img{
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
 }
 
+.circleimg{
+    transition: border-color 300ms ease-out;
+}
+
+
 .social{
-    .socialcard{
-        opacity:0;
-        transform: scaleX(0);
+    .detailscard{
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 300ms ease-out, opacity 300ms ease-out;
     }
 }
 
 .social:hover {
-    .socialcard{
+    .detailscard{
         opacity: 1;
-        transform: scaleX(1);
+        clip-path: inset(0 0 0 0);
+        img{
+            transform: rotate(-90deg);
+        }
+    }
+    img{
+        transform: rotate(-90deg);
+    }
+    .circleimg{
+        border-color: white;
     }
 }
