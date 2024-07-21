@@ -16,6 +16,7 @@
 }
 
 .social:hover {
+    transform: scale(1.1);
     .detailscard{
         opacity: 1;
         clip-path: inset(0 0 0 0);
@@ -29,4 +30,9 @@
     .circleimg{
         border-color: white;
     }
+}
+
+.rounded-r-custom {
+    border-top-right-radius: 2000px;
+    border-bottom-right-radius: 2000px;
 }

@@ -1,9 +1,10 @@
 import './ProjectCard.css'
+import { forwardRef } from 'react'
 
-export default function ProjectCard({ details, props }) {
+const ProjectCard = forwardRef(({ details, ...props }, ref) => {
 
     return (
-        <div className="card relative flex flex-col bg-cyan-500 border-4 border-gray-800 rounded-lg p-5 pb-3 min-w-[375px] container shadow-black/40 shadow-xl overflow-hidden" {...props}>
+        <div ref={ref} className="card relative flex flex-col bg-cyan-500 border-4 border-gray-800 rounded-lg p-5 pb-3 min-w-[375px] container shadow-black/40 shadow-xl overflow-hidden" {...props}>
             {/* image */}
             <div className="imgDiv relative rounded-lg overflow-hidden border-0">
                 <img className='border-0' src={details.img} />
@@ -45,4 +46,6 @@ export default function ProjectCard({ details, props }) {
             <div className='z-[91] pl-2 text-sm text-gray-800'>React, Node, Tailwind</div>
         </div>
     )
-}
+})
+
+export default ProjectCard

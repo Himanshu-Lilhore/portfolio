@@ -1,7 +1,7 @@
 
 export default function ContactCard() {
     return (
-        <div className="h-full text-black text-xl border-2 border-black rounded-3xl py-3 px-10">
+        <div className="h-full text-black text-xl border-2 border-black rounded-r-3xl px-10">
             <div className="text-xl py-6 font-bold flex justify-center underline underline-offset-4">
                 Write a message or a feedback
             </div>
