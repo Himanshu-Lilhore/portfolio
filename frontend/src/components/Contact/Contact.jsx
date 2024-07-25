@@ -7,11 +7,11 @@ export default function Contact() {
         <div className="px-36 py-16 flex justify-around h-fit bg-purple-500/20">
             <div className="flex h-fit">
 
-                <div>
+                <div className="z-[99]">
                     <SocialPalette />
                 </div>
 
-                <div>
+                <div className="z-[90]">
                     <ContactCard />
                 </div>
 
