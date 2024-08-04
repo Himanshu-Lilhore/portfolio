@@ -1,0 +1,94 @@
+:root {
+    --contact-bg-color: rgb(216, 180, 254);
+}
+
+.contact-main {
+    background: var(--contact-bg-color);
+}
+
+.social,
+.detailscard,
+img {
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.circleimg {
+    transition: border-color 300ms ease-out;
+}
+
+
+.social {
+    .detailscard {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 300ms ease-out, opacity 300ms ease-out;
+    }
+}
+
+.social:hover {
+    transform: scale(1.1);
+
+    .detailscard {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+
+        img {
+            transform: rotate(-90deg);
+        }
+    }
+
+    img {
+        transform: rotate(-90deg);
+    }
+
+    .circleimg {
+        border-color: white;
+    }
+}
+
+
+.rounded-r-custom {
+    border-top-right-radius: 2000px;
+    border-bottom-right-radius: 2000px;
+}
+
+.profile-container {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.profile-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.profile-container::before,
+.profile-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 100px;
+    pointer-events: none;
+    z-index: 101;
+    background: linear-gradient(to bottom, var(--contact-bg-color), rgba(0, 0, 0, 0));
+    transition: opacity 0.4s ease-in;
+    opacity: 1;
+}
+
+.profile-container:hover::before,
+.profile-container:hover::after {
+    opacity: 0;
+}
+
+.profile-container::before {
+    top: 0px;
+    background: linear-gradient(to bottom, var(--contact-bg-color), rgba(0, 0, 0, 0));
+}
+
+.profile-container::after {
+    bottom: 0px;
+    background: linear-gradient(to top, var(--contact-bg-color), rgba(0, 0, 0, 0));
+}

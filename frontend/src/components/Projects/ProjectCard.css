@@ -29,3 +29,25 @@
         transform: translateY(-35px);
     }
 }
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px; /* Width of the blurred edge */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 1; /* Ensure the blur effect is below the content */
+}
+
+.card::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.card::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}

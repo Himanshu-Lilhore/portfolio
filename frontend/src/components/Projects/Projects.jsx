@@ -25,8 +25,8 @@ export default function Projects() {
             const newCards = [...prevCards, ...projList];
             
             // preventing infinite card spawn
-            if (newCards.length > 3*projList.length) {
-                return newCards.slice(projList.length, 3*projList.length);
+            if (newCards.length > 15*projList.length) {
+                return newCards.slice(15*projList.length, 16*projList.length);
             }
 
             return newCards;
@@ -58,7 +58,7 @@ export default function Projects() {
         <div className="relative bg-purple-300 p-10">
             <div className="absolute top-0 text-9xl font-extrabold text-gray-700/50 left-1/2 transform -translate-x-1/2 top-10">PROJECTS</div>
             <div className="py-8 px-28">
-                <div className="flex px-8 py-16 gap-12 overflow-x-auto container border-x-4 border-black">
+                <div className="container flex px-8 py-16 gap-12 overflow-x-auto border-x-4 border-black">
                     {cards.map((card, index) => {
                         if (index === cards.length - 1) {
                             return (
