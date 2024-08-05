@@ -1,3 +1,5 @@
+import './Skills.css'
+
 export default function Skills() {
     const skills = {
         Languages: ['Javascript', 'Java', 'Python', 'Typescript', 'C/C++'],
@@ -9,7 +11,7 @@ export default function Skills() {
 
     return (
         <div className="py-24 relative bg-gradient-to-b from-transparent to-purple-300">
-            <div className="mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
+            <div className="skills-card mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
 
                 <div className="border-4 rounded-lg border-slate-700 flex flex-col p-10 backdrop-blur-sm bg-red-600/30 bg-clip-padding">
 
@@ -17,7 +19,7 @@ export default function Skills() {
 
                     {Object.keys(skills).map(key => {
                         return (
-                            <div key={key}className="flex flex-col my-4">
+                            <div key={key} className="flex flex-col my-4">
                                 <div className="pl-1 mb-3 text-base">{key}</div>
                                 <div className="flex flex-row flex-wrap gap-y-3 text-lg font-medium">
                                     {skills[key].map(val => {

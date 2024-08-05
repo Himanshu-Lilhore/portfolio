@@ -12,7 +12,7 @@ export default function Contact() {
                     <SocialPalette />
                 </div>
 
-                <div className="z-[90] absolute top-8 left-28">
+                <div className="z-[90] absolute left-28">
                     <ContactCard />
                 </div>
 

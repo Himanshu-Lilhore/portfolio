@@ -1,0 +1,37 @@
+:root {
+    --bubble-color: rgba(255, 255, 255, 0.63);
+}
+
+
+.Circle {
+    width: 50%;
+    height: 50%;
+    transition: 0.5s;
+}
+
+
+.contact-main:hover .Circle {
+    transform: scale(1.75) translate(-25%, -35%);
+    transition: ease 0.5s;
+}
+
+
+.talk-bubble {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    background-color: var(--bubble-color);
+    z-index: 1;
+}
+
+.tri-right.btm-right:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0px;
+    bottom: -1.5rem;
+    border: 12px solid;
+    border-color: var(--bubble-color) var(--bubble-color) transparent transparent;
+}
