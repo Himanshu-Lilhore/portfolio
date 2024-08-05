@@ -1,34 +1,81 @@
-.card,.imgDiv,.grad,.title,.desc,.link{
-    transition: transform 200ms linear, opacity 200ms linear, visibility 0s;
+* {
+  transition:
+    transform 200ms linear,
+    opacity 200ms linear,
+    visibility 0s,
+    mask-image 200ms linear,
+    -webkit-mask-image 200ms linear,
+    color 200ms linear;
 }
 
-.desc{
-    opacity: 0;
+.desc {
+  opacity: 0;
+}
+
+.title-title{
+  position: relative;
+}
+.title-title::after{
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 100%;
+  padding: 0 2px;
+  top: 0;
+  left: -3px;
+  background-color: black;
+  transform: rotate(90deg);
+  transition: transform 200ms linear, opacity 200ms linear;
+  z-index: -1;
+  opacity: 0;
+}
+
+.card {
+  img {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  }
 }
 
 .card:hover {
-    transform: scale(1.10);
-    
-    .imgDiv{
-        transform: scale(1.25);
-        overflow: visible;
-        .grad{
-            opacity: 100;
-        }
-        .link{
-            opacity: 100;
-        }
+  transform: scale(1.10);
+
+  .imgDiv {
+    transform: scale(1.25);
+    overflow: visible;
+
+    .grad {
+      opacity: 100;
     }
 
-    .title{
-        transform: translateY(-70px);
+    .link {
+      opacity: 100;
     }
 
-    .desc{
-        opacity:100;
-        transform: translateY(-35px);
+    img {
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     }
+  }
+
+  .title {
+    transform: translateY(-70px);
+    color:white;
+  }
+
+  .title-title::after {
+    transform: rotate(0deg);
+    opacity: 0.7;
+  }
+
+  .desc {
+    opacity: 100;
+    transform: translateY(-35px);
+  }
 }
+
+
+/* curved edges : */
 
 .card::before,
 .card::after {
@@ -54,10 +101,10 @@
 
 
 
-/* 
-Glare on hover :
 
-.card::after{
+/* Glare on hover : */
+
+/* .card::after{
     content:"";
     position:absolute;
     inset:0;

@@ -10,8 +10,8 @@ export default function Skills() {
     }
 
     return (
-        <div className="py-24 relative bg-gradient-to-b from-transparent to-purple-300">
-            <div className="skills-card mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
+        <div className="py-24 relative bg-gradient-to-b from-transparent to-purple-300 overflow-hidden">
+            <div className="skills-card z-[2] mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
 
                 <div className="border-4 rounded-lg border-slate-700 flex flex-col p-10 backdrop-blur-sm bg-red-600/30 bg-clip-padding">
 
@@ -34,6 +34,11 @@ export default function Skills() {
                 </div>
 
             </div>
+
+            <div className="absolute top-0 left-0 scale-110 w-full -z-10">
+                <img className="w-full" src={`/curves/curve1.svg`} />
+            </div>
+
         </div>
     )
 }

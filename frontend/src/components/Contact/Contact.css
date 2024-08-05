@@ -2,7 +2,7 @@
     --contact-bg-color: rgb(216, 180, 254);
 }
 
-.contact-main {
+.contact-section {
     background: var(--contact-bg-color);
 }
 
@@ -69,7 +69,7 @@ img {
     content: '';
     position: absolute;
     left: 0;
-    width: 25%;
+    width: 15%;
     height: 100px;
     pointer-events: none;
     z-index: 1;
@@ -91,4 +91,11 @@ img {
 .profile-container::after {
     bottom: 0px;
     background: linear-gradient(to top, var(--contact-bg-color), rgba(0, 0, 0, 0));
+}
+
+.connect-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 7rem;
+    font-family: sketchy-font;
 }

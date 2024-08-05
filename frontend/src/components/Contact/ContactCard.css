@@ -11,7 +11,7 @@
 
 
 .contact-main:hover .Circle {
-    transform: scale(1.75) translate(-25%, -35%);
+    transform: scale(1.75) translate(-15%, -35%);
     transition: ease 0.5s;
 }
 

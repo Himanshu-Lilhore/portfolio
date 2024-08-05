@@ -1,14 +1,14 @@
 import React from 'react';
 import './ContactCard.css';
 
-const ContactCard = () => {
+export default function ContactCard (){
     return (
         <div className="contact-card relative">
 
             {/* talk bubble */}
-            <div className="w-fit h-fit">
-                <div class="talk-bubble tri-right btm-right px-10 py-8">
-                    <div class="talktext">
+            <div className="relative w-fit h-fit backdrop-blur-sm z-[10]">
+                <div className="talk-bubble tri-right btm-right px-10 py-8">
+                    <div className="talktext">
                         <div className="text-xl py-6 font-bold flex justify-center underline underline-offset-4">
                             Write a message
                         </div>
@@ -44,7 +44,7 @@ const ContactCard = () => {
 
 
             {/* circle svg */}
-            <div className='absolute -right-36 -bottom-28 h-96 w-96 z-0'>
+            <div className='absolute -right-20 -bottom-28 h-96 w-96 z-0'>
                 <svg className='overflow-visible' id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95">
                     <defs>
                         <style>
@@ -59,5 +59,3 @@ const ContactCard = () => {
         </div>
     );
 };
-
-export default ContactCard;

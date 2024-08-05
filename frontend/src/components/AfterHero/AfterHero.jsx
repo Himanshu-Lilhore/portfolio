@@ -14,7 +14,7 @@ export default function AfterHero() {
 
                 <TwtAndBeach />
 
-                <div className="relative z-[90]"
+                <div className="relative z-[90] overflow-hidden"
                     style={{ top: - scrollVal * 2.1 }}>
 
                     <About />

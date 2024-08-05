@@ -4,11 +4,11 @@ import { forwardRef } from 'react'
 const ProjectCard = forwardRef(({ details, ...props }, ref) => {
 
     return (
-        <div ref={ref} className="card relative flex flex-col bg-cyan-500 border-4 border-gray-800 rounded-lg p-5 pb-3 min-w-[375px] container shadow-black/40 shadow-xl overflow-hidden" {...props}>
+        <div ref={ref} className="card backdrop-blur-sm relative flex flex-col bg-cyan-500/30 border-4 border-gray-800 rounded-lg p-5 pb-3 min-w-[375px] container shadow-black/40 shadow-xl overflow-hidden" {...props}>
             {/* image */}
             <div className="imgDiv relative rounded-lg overflow-hidden border-0">
                 <img className='border-0' src={details.img} />
-                <div className="grad opacity-0 absolute -inset-0.5 bg-gradient-to-b from-transparent from-20% to-70% to-cyan-500"></div>
+                {/* <div className="grad opacity-0 absolute -inset-0.5 bg-gradient-to-b from-transparent from-20% to-70% to-cyan-500/30"></div> */}
                 <div className='link text-white absolute z-[92] left-1/2 transform -translate-x-1/2 top-14 opacity-0'>
                     <button className='flex flex-row flex-nowrap rounded-sm bg-lime-600 py-1 px-9'>
                         <div className='flex flex-nowrap'>Live Link</div>
@@ -24,8 +24,8 @@ const ProjectCard = forwardRef(({ details, ...props }, ref) => {
 
 
             {/* title + github */}
-            <div className="title flex justify-between py-1 px-2 z-[91]">
-                <div className="text-xl font-extrabold">{details.title}</div>
+            <div className="title relative flex justify-between py-1 px-2 z-[91]">
+                <p id='title-title' className="title-title relative text-xl font-extrabold">{details.title}</p>
                 <div className="h-6 mt-1">
                     <a href={details.github}>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
