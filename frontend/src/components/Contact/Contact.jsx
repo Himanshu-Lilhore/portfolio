@@ -1,18 +1,46 @@
 import SocialPalette from "./SocialPalette";
 import ContactCard from "./ContactCard";
 import './Contact.css'
+import { useState, useEffect } from 'react'
 
 export default function Contact() {
+    const [connect, setConnect] = useState('connect?')
+    const [currIdx, setCurrIdx] = useState(0)
+    const connects = [
+        'connect?',
+        'connect!', 
+        'c*nn3ct!',  
+        'connect!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+        'c*nnect?', 
+        'c0nnect?', 
+        'c*nn3ct?', 
+        'conn3ct?', 
+        // 'connect!!',
+        // 'c0nn3ct?', 
+        // 'c0nn3ct!!', 
+    ]
+
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         setConnect(connects[Math.floor(Math.random()*connects.length)])
+    //     }, 300);
+    // }, [])
+
 
     return (
         <div className="contact-section relative px-36 py-16 flex justify-evenly h-fit">
-
-            <div className="connect-title -rotate-12 px-10">
-                <div className="-mb-5">Let's</div>
-                <div>connect?</div>
+            {/* section heading */}
+            <div className="connect-title -rotate-12 px-10 z-[99] font-extrabold">
+                <div className="-mb-5 w-fit">Let's</div>
+                <div className="w-fit relative">
+                    <div className="opacity-0 pr-5 pl-7 min-w-[34rem]">connect?</div>
+                    <div onMouseEnter={() => { setCurrIdx(prevVal => {return prevVal===connects.length-1?0:prevVal+1}) }}
+                        className="connect absolute top-0 left-0 nowrap pr-5 pl-7 backdrop-saturate-200 shadow-xl rounded-lg min-w-[34rem]">{connects[currIdx]}</div>
+                </div>
             </div>
 
-            <div className="contact-main flex h-fit relative">
+            {/* section main */}
+            <div className="contact-main flex justify-center h-fit relative">
 
                 <div className="z-[99]">
                     <SocialPalette />
@@ -22,10 +50,15 @@ export default function Contact() {
                     <ContactCard />
                 </div>
 
-                <div className="min-w-96">
+                <div className="min-w-96 -translate-x-32">
                     {/* dummy placeholder to maintain container size */}
                 </div>
 
+            </div>
+
+            {/* doodle */}
+            <div className="absolute w-[60rem] -top-[20rem] -left-[20rem] rotate-6 inset-x-0 z-0">
+                <img className="w-full" src={'/doodles/doodle4.png'} />
             </div>
 
         </div>

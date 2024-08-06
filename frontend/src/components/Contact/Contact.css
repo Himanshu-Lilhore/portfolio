@@ -98,4 +98,8 @@ img {
     flex-direction: column;
     font-size: 7rem;
     font-family: sketchy-font;
+    .connect{
+        backdrop-filter: saturate(2.5);
+        transition: backdrop-filter 200ms linear;
+    }
 }
