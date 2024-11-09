@@ -1,7 +1,16 @@
 import React from 'react';
 import './ContactCard.css';
+import {useState} from 'react';
 
 export default function ContactCard (){
+    const [contact, setContact] = useState('');
+    const [msg, setMsg] = useState('');
+
+    function handleSend() {
+        setContact('');
+        setMsg('');
+    }
+
     return (
         <div className="contact-card relative">
 
@@ -19,6 +28,8 @@ export default function ContactCard (){
                                 className="text-base rounded-md px-2"
                                 style={{ minWidth: '240px' }}
                                 placeholder="(optional)"
+                                onChange={(e) => setContact(e.target.value)}
+                                value={contact}
                             />
                         </div>
                         <div className="flex justify-between py-4">
@@ -28,12 +39,15 @@ export default function ContactCard (){
                                 className="text-base rounded-md px-2 ml-20 max-h-20"
                                 style={{ minWidth: '240px' }}
                                 placeholder="Write a message..."
+                                onChange={(e) => setMsg(e.target.value)}
+                                value={msg}
                             />
                         </div>
                         <div className="flex justify-center py-4">
                             <button
                                 className="rounded-full px-5 py-1"
                                 style={{ color: '#f48925', backgroundColor: 'black' }}
+                                onClick={handleSend}
                             >
                                 SEND
                             </button>

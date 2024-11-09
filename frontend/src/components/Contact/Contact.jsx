@@ -1,41 +1,45 @@
 import SocialPalette from "./SocialPalette";
 import ContactCard from "./ContactCard";
 import './Contact.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, forwardRef } from 'react'
 
-export default function Contact() {
+const Contact = forwardRef((props, ref) => {
     const [connect, setConnect] = useState('connect?')
     const [currIdx, setCurrIdx] = useState(0)
     const connects = [
         'connect?',
         'connect!', 
-        'c*nn3ct!',  
-        'connect!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-        'c*nnect?', 
-        'c0nnect?', 
-        'c*nn3ct?', 
-        'conn3ct?', 
+        // 'c*nn3ct!',  
+        // 'connect!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+        // 'c*nnect?', 
+        // 'c0nnect?', 
+        // 'c*nn3ct?', 
+        // 'conn3ct?', 
         // 'connect!!',
         // 'c0nn3ct?', 
         // 'c0nn3ct!!', 
     ]
 
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         setConnect(connects[Math.floor(Math.random()*connects.length)])
-    //     }, 300);
-    // }, [])
+    useEffect(() => {
+        setInterval(() => {
+            setConnect(connects[Math.floor(Math.random()*connects.length)])
+        }, 500);
+    }, [])
 
 
     return (
-        <div className="contact-section relative px-36 py-16 flex justify-evenly h-fit">
+        <div ref={ref} className="contact-section relative px-36 py-16 flex justify-evenly h-fit">
             {/* section heading */}
             <div className="connect-title -rotate-12 px-10 z-[99] font-extrabold">
                 <div className="-mb-5 w-fit">Let's</div>
                 <div className="w-fit relative">
                     <div className="opacity-0 pr-5 pl-7 min-w-[34rem]">connect?</div>
-                    <div onMouseEnter={() => { setCurrIdx(prevVal => {return prevVal===connects.length-1?0:prevVal+1}) }}
-                        className="connect absolute top-0 left-0 nowrap pr-5 pl-7 backdrop-saturate-200 shadow-xl rounded-lg min-w-[34rem]">{connects[currIdx]}</div>
+                    <div 
+                        // onMouseEnter={() => { setCurrIdx(prevVal => {return prevVal===connects.length-1?0:prevVal+1}) }}
+                        className="connect absolute top-0 left-0 nowrap pr-5 pl-7 backdrop-saturate-200 shadow-xl rounded-lg min-w-[34rem]">
+                        {/*{connects[currIdx]}*/}
+                        {connect}
+                    </div>
                 </div>
             </div>
 
@@ -63,4 +67,6 @@ export default function Contact() {
 
         </div>
     )
-}
+})
+
+export default Contact;

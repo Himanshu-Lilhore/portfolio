@@ -1,9 +1,13 @@
-export default function Navigator({children}) {
+import { forwardRef } from 'react';
+
+const Navigator = forwardRef((props, ref) => {
     return (
         <>
-            <div className='content-center p-3'>
-                {children}
-            </div>
+            <button {...props} className='content-center p-3'>
+                {props.children}
+            </button>
         </>
     )
-}
+})
+
+export default Navigator;

@@ -4,23 +4,27 @@ import TwtAndBeach from "./TwtAndBeach"
 import About from "../About/About"
 import Projects from "../Projects/Projects"
 import Contact from "../Contact/Contact"
+import Footer from "../Footer/Footer"
+import { RefContext } from '../Util/RefContext';
+import { useContext } from 'react';
 
 export default function AfterHero() {
     const { scrollVal, setScrollVal } = useScroll()
+    const { projectsRef, aboutRef, contactRef } = useContext(RefContext);
 
     return (
         <>
-            <div className='relative min-h-[1500px]'>
+            <div className='relative'>
 
                 <TwtAndBeach />
 
-                <div className="relative z-[90] overflow-hidden"
-                    style={{ top: - scrollVal * 2.1 }}>
+                <div className="relative z-[90] overflow-hidden">
 
-                    <About />
+                    <About ref={aboutRef} />
                     <Skills />
-                    <Projects />
-                    <Contact />
+                    <Projects ref={projectsRef}/>
+                    <Contact ref={contactRef}/>
+                    <Footer />
 
                 </div>
 

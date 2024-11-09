@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback, forwardRef } from 'react';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
-export default function Projects() {
+const Projects = forwardRef((props, ref) => {
     const [cards, setCards] = useState([]);
     const observerRef = useRef(null);
 
     const projList = [
-        { title: "Skillswap", img: "/projects/skillswap.png", github: "", tech: [], desc: ['Collaborate and find mentors', '50+ registered users', 'Tinder for techies'] },
-        { title: "Youtube comment scraper", img: "", github: "", tech: [], desc: [] },
-        { title: "Blog", img: "", github: "", tech: [], desc: [] },
-        { title: "Realtime chat app", img: "", github: "", tech: [], desc: [] },
-        { title: "OneClick", img: "", github: "", tech: [], desc: [] },
+        { title: "Skillswap", img: "/projects/skillswap.png", github: "https://github.com/Himanshu-Lilhore/Skillswap", tech: ['React', 'Node', 'Tailwind', 'mongoDB'], desc: ['Collaborate and find mentors', '50+ registered users', 'Tinder for techies'], link: 'https://skillswap-seven.vercel.app/' },
+        { title: "Collaborative IDE", img: "projects/collaborative ide.png", github: "https://github.com/Himanshu-Lilhore/Collaborative-IDE", tech: ['Typescript', 'React', 'node', 'Redis', 'WebRTC', 'mongoDB'], desc: ['Realtime collaborative IDE', 'Uses redis & webRTC for low latency', 'Dockerized sessions for enhanced privacy'], link: '' },
+        { title: "do-it-now", img: "/projects/do-it-now.png", github: "https://github.com/Himanshu-Lilhore/do-it-now", tech: ['typescript', 'React', 'node', 'mongoDB', 'Tailwind'], desc: ['A day planner', 'Collective calendar+todo app', 'Used Youtube API for fetching video metadata & thumbnail'], link: '' },
+        { title: "Youtube comment scraper", img: "/projects/yt-comment-scraper.png", github: "https://github.com/Himanshu-Lilhore/yt-comment-scraper", tech: ['React', 'Node', 'Tailwind', 'YoutubeAPI'], desc: ['Searching through comments of a video', 'Filters comments mentioning a keyword', 'Works on YT shorts as well'], link: 'https://yt-comment-scraper.vercel.app/' },
+        { title: "OneClick", img: "/projects/OneClick.png", github: "https://github.com/Himanshu-Lilhore/OneClick", tech: ['Javascript', 'HTML'], desc: ['Browser extension : Manual testing helper', 'Automates a part of SITs', 'Makes testing 10x as quick'], link: 'https://microsoftedge.microsoft.com/addons/detail/oneclick/glhmdjhpacepphpanbihpaidmgfbppkg' },
+        { title: "Lift simulation", img: "/projects/lift simulation.png", github: "https://github.com/Himanshu-Lilhore/lift-sim-js", tech: ['Javascript', 'tailwind'], desc: ['Simulating lift movement in a building', 'Extensive use of CSS animations', 'Done under a challenge by RealDevSquad'], link: 'https://himanshu-lilhore.github.io/lift-sim-js/' },
     ];
 
 
@@ -51,7 +52,7 @@ export default function Projects() {
     );
 
     return (
-        <div className="relative bg-purple-300 p-10">
+        <div ref={ref} className="relative bg-purple-300 p-10">
             {/* title */}
             <div className="absolute top-0 text-9xl font-extrabold text-gray-700/50 left-1/2 transform -translate-x-1/2 top-10">PROJECTS</div>
 
@@ -82,4 +83,6 @@ export default function Projects() {
             </div>
         </div>
     );
-}
+})
+
+export default Projects;

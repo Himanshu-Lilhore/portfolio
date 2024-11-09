@@ -1,13 +1,15 @@
 import Waves from "./Waves/Waves"
+import { useScroll } from "../Util/ScrollProvider"
 
 export default function Hero() {
     const hiClasses = 'p-3 px-5 w-fit -rotate-6 polygon'
     const devClasses = 'p-2'
+    const { scrollVal, setScrollVal } = useScroll()
 
     return (
         <>
             <div className="bg-cyan-400 flex flex-wrap justify-center content-center h-screen overflow-x-hidden">
-                <div className='absolute text-4xl text-white' style={{ top: '17rem' }}>
+                <div className='absolute text-4xl text-white' style={{ top: 272 + scrollVal*0.8 }}>
 
                     {/* Hi */}
                     <div className="relative top-1 left-2 shadow-2xl shadow-white">

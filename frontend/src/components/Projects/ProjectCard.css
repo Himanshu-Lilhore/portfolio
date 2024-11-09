@@ -24,7 +24,7 @@
   top: 0;
   left: -3px;
   background-color: black;
-  transform: rotate(90deg);
+/*  transform: rotate(90deg);*/
   transition: transform 200ms linear, opacity 200ms linear;
   z-index: -1;
   opacity: 0;
@@ -70,7 +70,7 @@
 
   .desc {
     opacity: 100;
-    transform: translateY(-35px);
+    transform: translateY(-34px);
   }
 }
 

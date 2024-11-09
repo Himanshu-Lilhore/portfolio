@@ -1,13 +1,14 @@
 import { useScroll } from "../Util/ScrollProvider"
 import Highlighter from "../Util/Highlighter"
 import DescLine from "./DescLine"
+import { forwardRef } from 'react';
 
-export default function About() {
+const About = forwardRef((props, ref) => {
     const { scrollVal, setScrollVal } = useScroll()
 
     return (
         <>
-            <div className="relative pl-8">
+            <div ref={ref} className="relative pl-8">
                 <div className="text-5xl pb-12 rubik-google-font">Who am I ?</div>
                 <div className="text-2xl">
                     <div className="flex flex-col">
@@ -25,7 +26,7 @@ export default function About() {
 
                         <DescLine>
                             At
-                            <Highlighter bgColor="bg-green-500/90">Deloitte</Highlighter>
+                            <Highlighter bgColor="bg-green-500">Deloitte</Highlighter>
                             , I have worked on web development stacks including
                             <Highlighter bgColor="bg-rose-400">MERN and Java</Highlighter>
                             in backend for health projects
@@ -44,4 +45,6 @@ export default function About() {
             </div>
         </>
     )
-}
+})
+
+export default About;

@@ -16,7 +16,7 @@ export default function TwitterEmbed() {
     }, []);
 
     return (
-        <div className="h-96 w-96 overflow-hidden hover:overflow-auto border-2 rounded-lg transform transition-transform duration-500 hover:scale-110 shadow-black shadow-2xl"
+        <div className="h-96 w-96 overflow-hidden hover:overflow-auto border-2 rounded-lg transform transition-transform duration-500 hover:scale-120 shadow-black shadow-2xl"
         style={{animation:'scale 2s'}}>
             <div ref={twitterRef}>
                 <a
