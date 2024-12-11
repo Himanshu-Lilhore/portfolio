@@ -17,7 +17,7 @@ function App() {
 				else if (isTablet) viewType = 'tablet';
 
 				const response = await Axios.post(`${import.meta.env.VITE_BACKEND_URL}/state/views`, { viewType });
-				console.log('View added successfully:', response.data);
+				// console.log('View added successfully:', response.data);
 			} catch (err) {
 				console.error('Error sending view data:', err);
 			}

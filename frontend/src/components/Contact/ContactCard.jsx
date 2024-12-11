@@ -16,7 +16,7 @@ export default function ContactCard (){
           if (contact) payload.name = contact;
     
           const response = await Axios.post(`${import.meta.env.VITE_BACKEND_URL}/message/send`, payload);
-          console.log(response.data);
+        //   console.log(response.data);
     
           setContact('');
           setMsg('');
