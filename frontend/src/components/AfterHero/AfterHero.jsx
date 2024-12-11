@@ -9,7 +9,6 @@ import { RefContext } from '../Util/RefContext';
 import { useContext } from 'react';
 
 export default function AfterHero() {
-    const { scrollVal, setScrollVal } = useScroll()
     const { projectsRef, aboutRef, contactRef } = useContext(RefContext);
 
     return (

@@ -5,7 +5,6 @@ import { useState, useEffect, forwardRef } from 'react'
 
 const Contact = forwardRef((props, ref) => {
     const [connect, setConnect] = useState('connect?')
-    const [currIdx, setCurrIdx] = useState(0)
     const connects = [
         'connect?',
         'connect!', 

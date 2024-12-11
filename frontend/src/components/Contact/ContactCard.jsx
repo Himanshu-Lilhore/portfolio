@@ -1,15 +1,29 @@
 import React from 'react';
 import './ContactCard.css';
 import {useState} from 'react';
+import Axios from 'axios'
+
 
 export default function ContactCard (){
     const [contact, setContact] = useState('');
     const [msg, setMsg] = useState('');
 
-    function handleSend() {
-        setContact('');
-        setMsg('');
-    }
+    const handleSend = async () => {
+        try {
+          const payload = { 
+            text: msg 
+          };
+          if (contact) payload.name = contact;
+    
+          const response = await Axios.post(`${import.meta.env.VITE_BACKEND_URL}/message/send`, payload);
+          console.log(response.data);
+    
+          setContact('');
+          setMsg('');
+        } catch (err) {
+          console.error('Error sending message:', err);
+        }
+      };
 
     return (
         <div className="contact-card relative">
