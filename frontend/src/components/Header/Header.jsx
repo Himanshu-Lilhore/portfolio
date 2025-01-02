@@ -18,14 +18,14 @@ export default function Header() {
 
     return (
         <>
-            <div className="px-36 flex justify-between w-full z-[100]">
+            <div className="px-2 lg:px-36 flex justify-between w-full z-[100]">
 
-                <div className='logo-container'>
+                <div className='logo-container scale-[0.8] lg:scale-100'>
                     <img src={logo} className="logo" alt="Logo" />
                 </div>
 
 
-                <div className='text-gray-200 border-gray-400 border my-auto flex justify-between text-xl px-6 space-x-6 bg-gray-400/15 h-fit justify-items-center rounded-full'>
+                <div className='hidden lg:block text-gray-200 border-gray-400 border my-auto flex justify-between text-xl px-3 space-x-6 bg-gray-400/15 h-fit justify-items-center rounded-full'>
                     <Navigator onClick={() => scrollToSection(aboutRef)}>About</Navigator>
                     <Navigator onClick={resumeDownload}>Resume</Navigator>
                     <Navigator onClick={() => scrollToSection(projectsRef)}>Projects</Navigator>

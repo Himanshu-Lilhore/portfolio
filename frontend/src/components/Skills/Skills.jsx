@@ -1,4 +1,5 @@
 import './Skills.css'
+import BeachLeft from '../../assets/Beach/BeachLeft'
 
 export default function Skills() {
     const skills = {
@@ -10,9 +11,13 @@ export default function Skills() {
     }
 
     return (
-        <div className="py-24 relative bg-gradient-to-b from-transparent to-purple-300 overflow-hidden">
-            <div className="skills-card z-[2] mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
+        <div className="top-[-90px] lg:top-0 py-24 relative bg-gradient-to-b from-transparent to-purple-300 overflow-hidden">
+            <div className='block lg:hidden -z-[20]'>
+                <BeachLeft className='absolute top-0 left-0 min-w-[900px] rotate-180'></BeachLeft>
+                <div className='absolute left-0 top-0 w-full h-full bg-gradient-to-b from-transparent to-purple-300'></div>
+            </div>
 
+            <div className="skills-card z-[9999] lg:z-2 mx-56 relative border-0 rounded-lg overflow-hidden shadow-2xl shadow-black">
                 <div className="border-4 rounded-lg border-slate-700 flex flex-col p-10 backdrop-blur-sm bg-red-600/30 bg-clip-padding">
 
                     <div className="absolute text-2xl font-bold top-9 -right-16 bg-red-500 px-20 rotate-45">Skillset</div>
@@ -32,7 +37,6 @@ export default function Skills() {
                         )
                     })}
                 </div>
-
             </div>
 
             <div className="absolute top-0 left-0 scale-110 w-full -z-10">

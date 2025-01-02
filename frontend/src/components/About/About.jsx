@@ -8,9 +8,9 @@ const About = forwardRef((props, ref) => {
 
     return (
         <>
-            <div ref={ref} className="relative pl-8">
-                <div className="text-5xl pb-12 rubik-google-font">Who am I ?</div>
-                <div className="text-2xl">
+            <div ref={ref} className="relative p-6 lg:pl-8">
+                <div className="text-4xl lg:text-5xl pb-6 lg:pb-12 rubik-google-font">Who am I ?</div>
+                <div className="text-lg lg:text-2xl">
                     <div className="flex flex-col">
 
                         <DescLine>
@@ -26,8 +26,8 @@ const About = forwardRef((props, ref) => {
 
                         <DescLine>
                             At
-                            <Highlighter bgColor="bg-green-500">Deloitte</Highlighter>
-                            , I have worked on web development stacks including
+                            <Highlighter bgColor="bg-lime-500">Deloitte</Highlighter>
+                            I have worked on web development stacks including
                             <Highlighter bgColor="bg-rose-400">MERN and Java</Highlighter>
                             in backend for health projects
                         </DescLine>

@@ -17,7 +17,7 @@ export default function AfterHero() {
 
                 <TwtAndBeach />
 
-                <div className="relative z-[90] overflow-hidden">
+                <div className="relative z-[90] overflow-hidden top-[-423px] lg:top-0">
 
                     <About ref={aboutRef} />
                     <Skills />
