@@ -30,7 +30,8 @@ function App() {
 		<>
 			<ScrollProvider>
 				<RefProvider>
-					<div className='flex flex-col overflow-x-hidden'>
+					<div className='flex md:hidden h-[95vh] w-[95vw] my-2 mx-auto border-4 border-red-900 bg-red-100/40 items-center justify-center rounded-2xl text-center font-bold text-4xl p-4 sketchy-font'>Coming soon to mobile... <br /><br />Please view on a desktop</div>
+					<div className='hidden md:flex flex-col overflow-x-hidden'>
 						<Header />
 						<Hero />
 						<AfterHero />
