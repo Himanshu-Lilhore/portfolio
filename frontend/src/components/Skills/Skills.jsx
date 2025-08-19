@@ -3,8 +3,8 @@ import BeachLeft from '../../assets/Beach/BeachLeft'
 
 export default function Skills() {
     const skills = {
-        Languages: ['Javascript', 'Java', 'Python', 'Typescript', 'C/C++'],
-        Technologies: ['Node.js', 'Express.js', 'React.js', 'SocketIO', 'Tailwind', 'Selenium', 'HTML5', 'CSS'],
+        Languages: ['Javascript', 'Python', 'Java', 'Typescript', 'C/C++'],
+        Technologies: ['Next.js', 'Node.js', 'Express.js', 'React.js', 'Django', 'SocketIO', 'Tailwind', 'Selenium', 'HTML5', 'CSS'],
         Databases: ['MongoDB', 'MySQL', 'OracleDB'],
         'CI/CD': ['Github Pages', 'Vercel', 'Github Actions', 'Unit Testing'],
         'Developer Tools': ['Git/Github', 'VS Code', 'Eclipse', 'Jira', 'ChatGPT', 'Jama']

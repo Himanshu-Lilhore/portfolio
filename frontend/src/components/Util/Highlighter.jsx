@@ -1,12 +1,17 @@
-import React from 'react';
-
-const Highlighter = ({ bgColor, children, style }) => {
-
+const Highlighter = ({ bgColor = "bg-yellow-300", children, className = "" }) => {
     return (
-        <div className='relative whitespace-nowrap mx-1'>
-            <div className={`${style} z-[41] relative`}>&nbsp;{children}&nbsp;</div>
-            <div className={`${bgColor} z-40 absolute top-2 left-0 bg-red-500 w-full h-3/4 blur-sm opacity-60`}></div>
-        </div>)
+        <span className={`relative inline-block mx-1 ${className}`}>
+            {/* text */}
+            <span className="relative z-30 px-1">{children}</span>
+
+            {/* highlighter */}
+            <span
+                aria-hidden="true"
+                className={`${bgColor} z-20 pointer-events-none absolute -left-1 -right-1 top-1/2 -translate-y-1/2 rounded-md blur-sm opacity-25`}
+                style={{ height: "0.9em" }}
+            />
+        </span>
+    );
 };
 
 export default Highlighter;
