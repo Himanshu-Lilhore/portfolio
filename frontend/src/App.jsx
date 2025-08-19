@@ -5,7 +5,7 @@ import Hero from './components/Hero/Hero'
 import AfterHero from './components/AfterHero/AfterHero'
 import { ScrollProvider } from './components/Util/ScrollProvider'
 import { RefProvider } from './components/Util/RefContext'
-import { isMobile, isTablet, isDesktop } from 'react-device-detect'
+import { isMobile, isTablet } from 'react-device-detect'
 import Axios from 'axios'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 				else if (isTablet) viewType = 'tablet';
 
 				const response = await Axios.post(`${import.meta.env.VITE_BACKEND_URL}/state/views`, { viewType });
-				// console.log('View added successfully:', response.data);
+				console.log('Top secret :', response.data);
 			} catch (err) {
 				console.error('Error sending view data:', err);
 			}

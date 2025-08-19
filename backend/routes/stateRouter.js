@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const {addView} = require('../controllers/stateController')
+const { addView, getViews } = require("../controllers/stateController");
 
-router.post('/views', addView)
+router.post("/views", addView);
+router.get("/get-views", getViews);
 
-module.exports = router; 
+module.exports = router;
