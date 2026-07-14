@@ -13,6 +13,9 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
+    // Prop-types validation is legacy; this codebase documents shapes via the
+    // data modules in src/data instead. Disable to avoid boilerplate noise.
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

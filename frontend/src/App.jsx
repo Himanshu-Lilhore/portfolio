@@ -1,45 +1,45 @@
-import './App.css'
-import { useEffect } from 'react'
-import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import AfterHero from './components/AfterHero/AfterHero'
-import { ScrollProvider } from './components/Util/ScrollProvider'
-import { RefProvider } from './components/Util/RefContext'
-import { isMobile, isTablet } from 'react-device-detect'
-import Axios from 'axios'
+import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Waves from "./components/Waves";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import { pingView } from "./lib/analytics";
 
-function App() {
-	useEffect(() => {
-		const sendViewData = async () => {
-			try {
-				let viewType = 'laptop';
-				if (isMobile) viewType = 'mobile';
-				else if (isTablet) viewType = 'tablet';
+export default function App() {
+  useEffect(() => {
+    pingView();
+  }, []);
 
-				const response = await Axios.post(`${import.meta.env.VITE_BACKEND_URL}/state/views`, { viewType });
-				console.log('Top secret :', response.data);
-			} catch (err) {
-				console.error('Error sending view data:', err);
-			}
-		};
+  return (
+    <div className="relative">
+      <Navbar />
 
-		sendViewData();
-	}, []);
+      {/* Sticky-reveal stage: the Hero pins in place, and the ocean panel
+          below scrolls up over it — the waves rise to cover the hero and
+          carry the next section in with them. */}
+      <div className="relative">
+        <Hero />
 
-	return (
-		<>
-			<ScrollProvider>
-				<RefProvider>
-					<div className='flex md:hidden h-[95vh] w-[95vw] my-2 mx-auto border-4 border-red-900 bg-red-100/40 items-center justify-center rounded-2xl text-center font-bold text-4xl p-4 sketchy-font'>Coming soon to mobile... <br /><br />Please view on a desktop</div>
-					<div className='hidden md:flex flex-col overflow-x-hidden'>
-						<Header />
-						<Hero />
-						<AfterHero />
-					</div>
-				</RefProvider>
-			</ScrollProvider>
-		</>
-	)
+        <div className="relative z-10 -mt-[40vh]">
+          {/* Waves are the top edge of the rising panel; the frontmost layer
+              is ink-950 so it fuses seamlessly into the content below. */}
+          <Waves className="h-[46vh]" />
+          {/* -mt-px overlaps the wave band by 1px so no hairline seam can show
+              between the ink ocean and the ink section. */}
+          <main className="relative -mt-px bg-ink-950">
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </main>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 }
-
-export default App
