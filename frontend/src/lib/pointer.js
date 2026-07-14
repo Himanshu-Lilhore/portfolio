@@ -38,7 +38,19 @@ function kick() {
   }
 }
 
+// Below this width (Tailwind's md) we treat it as "mobile" and don't move
+// anything with the pointer — matches where the mobile menu kicks in and
+// avoids touch-drag nudging the waves.
+const MIN_WIDTH = 768;
+
 function onMove(e) {
+  if (window.innerWidth < MIN_WIDTH) {
+    // ease everything back to rest instead of tracking touch
+    targetX = 0;
+    targetY = 0;
+    kick();
+    return;
+  }
   targetX = (e.clientX / window.innerWidth) * 2 - 1;
   targetY = (e.clientY / window.innerHeight) * 2 - 1;
   kick();

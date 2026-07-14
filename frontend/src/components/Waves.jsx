@@ -54,8 +54,10 @@ function Layer({ periods, amp, base, phase, fill, opacity, anim, mx, scroll, tai
       <div ref={pointerRef} className="absolute inset-0 will-change-transform">
         {/* Three tiled copies, offset one copy to the LEFT (-left-full) so a
             full copy of overhang sits on each side of the viewport. However far
-            the drift or pointer shifts them, the viewport is always covered. */}
-        <div className={`absolute -left-full bottom-0 flex h-full w-[300%] ${anim}`} style={{ opacity }}>
+            the drift or pointer shifts them, the viewport is always covered.
+            On mobile each copy is twice as wide (w-[600%]) so the waves show
+            fewer, gentler humps instead of a cramped, high-frequency ripple. */}
+        <div className={`absolute -left-full bottom-0 flex h-full w-[600%] sm:w-[300%] ${anim}`} style={{ opacity }}>
           <svg className={`h-full w-1/3 ${fill}`} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true">
             <path d={d} />
           </svg>
@@ -71,7 +73,7 @@ function Layer({ periods, amp, base, phase, fill, opacity, anim, mx, scroll, tai
             runs far down behind the next section (same colour), and is extra
             wide so pointer shifts never expose an edge. Result: everything
             below the front wave is one seamless ink surface — no line, no gap. */}
-        {tail && <div className="absolute -left-full top-[86%] h-[400vh] w-[300%] bg-ink-950" />}
+        {tail && <div className="absolute -left-full top-[86%] h-[400vh] w-[600%] bg-ink-950" />}
       </div>
     </div>
   );

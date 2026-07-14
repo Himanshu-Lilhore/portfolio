@@ -24,10 +24,11 @@ export default function App() {
       <div className="relative">
         <Hero />
 
-        <div className="relative z-10 -mt-[40vh]">
+        <div className="relative z-10 -mt-[22vh] sm:-mt-[40vh]">
           {/* Waves are the top edge of the rising panel; the frontmost layer
-              is ink-950 so it fuses seamlessly into the content below. */}
-          <Waves className="h-[46vh]" />
+              is ink-950 so it fuses seamlessly into the content below. Shorter
+              band on mobile keeps the waves gentle rather than towering. */}
+          <Waves className="h-[26vh] sm:h-[46vh]" />
           {/* -mt-px overlaps the wave band by 1px so no hairline seam can show
               between the ink ocean and the ink section. */}
           <main className="relative -mt-px bg-ink-950">

@@ -39,14 +39,15 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "border-white/10 bg-ink-950/70 shadow-card backdrop-blur-md"
-          : "border-transparent bg-transparent"
-      }`}
-    >
-      <nav className="container-p flex h-16 items-center justify-between">
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+          scrolled
+            ? "border-white/10 bg-ink-950/70 shadow-card backdrop-blur-md"
+            : "border-transparent bg-transparent"
+        }`}
+      >
+        <nav className="container-p flex h-16 items-center justify-between">
         <a href="#home" onClick={go("home")} className="group flex items-center gap-2.5">
           <img src="/logo.svg" alt="" className="h-8 w-8 transition-transform group-hover:rotate-12" />
           <span className="font-display text-lg font-bold text-white">
@@ -88,41 +89,41 @@ export default function Navbar() {
             <span className={`block h-0.5 w-6 bg-current transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
-      </nav>
+        </nav>
+      </header>
 
-      {/* mobile menu */}
+      {/* Mobile menu — kept OUTSIDE <header> on purpose: the header uses
+          backdrop-blur, and a backdrop-filter ancestor would make this fixed
+          overlay position relative to the header (collapsing it) instead of the
+          viewport. As a sibling it covers the full screen correctly. */}
       <div
-        className={`md:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`fixed inset-0 top-16 z-40 bg-ink-950 transition-opacity duration-300 md:hidden ${
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
       >
-        <div
-          className={`fixed inset-0 top-16 z-40 bg-ink-950/95 backdrop-blur-lg transition-opacity duration-300 ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="container-p flex flex-col gap-1 pt-6">
-            {LINKS.map((l) => (
-              <a
-                key={l.id}
-                href={`#${l.id}`}
-                onClick={go(l.id)}
-                className={`rounded-xl px-4 py-4 text-lg font-medium transition-colors ${
-                  active === l.id ? "bg-white/5 text-brand" : "text-slate-200 hover:bg-white/5"
-                }`}
-              >
-                {l.label}
-              </a>
-            ))}
+        <div className="container-p flex flex-col gap-1 pt-6">
+          {LINKS.map((l) => (
             <a
-              href={profile.resume}
-              download={profile.resumeFileName}
-              onClick={() => setOpen(false)}
-              className="btn-primary mt-4 w-full"
+              key={l.id}
+              href={`#${l.id}`}
+              onClick={go(l.id)}
+              className={`rounded-xl px-4 py-4 text-lg font-medium transition-colors ${
+                active === l.id ? "bg-white/5 text-brand" : "text-slate-200 hover:bg-white/5"
+              }`}
             >
-              Download résumé
+              {l.label}
             </a>
-          </div>
+          ))}
+          <a
+            href={profile.resume}
+            download={profile.resumeFileName}
+            onClick={() => setOpen(false)}
+            className="btn-primary mt-4 w-full"
+          >
+            Download résumé
+          </a>
         </div>
       </div>
-    </header>
+    </>
   );
 }
