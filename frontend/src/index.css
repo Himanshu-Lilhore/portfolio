@@ -11,6 +11,8 @@
     scroll-behavior: smooth;
     /* offset for the fixed navbar when jumping to #sections */
     scroll-padding-top: 5rem;
+    /* prevent any horizontal scroll / zoom-out reveal from wide decorations */
+    overflow-x: clip;
   }
 
   body {

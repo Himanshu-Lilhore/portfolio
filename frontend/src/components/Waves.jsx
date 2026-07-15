@@ -88,7 +88,11 @@ function Layer({ periods, amp, base, phase, fill, opacity, anim, mx, scroll, tai
  */
 export default function Waves({ className = "" }) {
   return (
-    <div className={`pointer-events-none relative w-full ${className}`}>
+    // overflow-x-clip contains the extra-wide tiled copies horizontally (so they
+    // can't be revealed by zooming out or horizontal scroll on mobile) while
+    // leaving the vertical axis visible, so the crests can still rise over the
+    // hero. clip on one axis does NOT force the other, unlike hidden.
+    <div className={`pointer-events-none relative w-full overflow-x-clip ${className}`}>
       {LAYERS.map((l, i) => (
         <Layer key={i} {...l} />
       ))}
